@@ -1,0 +1,23 @@
+{
+  "name": "groth16-zkp",
+  "version": "1.0.0",
+  "description": "Groth16 Zero-Knowledge Proof Authentication System",
+  "main": "index.js",
+  "scripts": {
+    "server": "node server/httpServer.js",
+    "nonce": "node server/nonceGen.js",
+    "commitment": "node device/commitmentGen.js",
+    "proof": "node device/genProof.js",
+    "verify": "node server/checkProof.js",
+    "demo": "npm run nonce && npm run commitment && npm run proof && npm run verify"
+  },
+  "dependencies": {
+    "circomlibjs": "^0.1.6",
+    "snarkjs": "^0.7.0",
+    "express": "^4.18.2",
+    "axios": "^1.6.0"
+  },
+  "keywords": ["groth16", "zkp", "zero-knowledge", "proof"],
+  "author": "",
+  "license": "ISC"
+}
